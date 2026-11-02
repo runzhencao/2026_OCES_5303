@@ -1,0 +1,29 @@
+{
+  "verification_actor": "Codex",
+  "verified_at": "2026-11-02",
+  "verification_status": "passed_actual_colab_cpu_run_all",
+  "release_ref": "submission-v1",
+  "notebook": "Assignment_1/ass1_oces5303_21073359.ipynb",
+  "execution_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "errors_observed": 0,
+  "figures": 7,
+  "scope": "Fresh training and analysis from the embedded course data. Assignment 1 notebook is unchanged in submission-v2."
+}

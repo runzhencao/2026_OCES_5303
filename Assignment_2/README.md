@@ -2,7 +2,7 @@
 
 Cao Runzhen · 21073359
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/runzhencao/2026_OCES_5303/blob/submission-v1/Assignment_2/ass2_oces5303_21073359.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/runzhencao/2026_OCES_5303/blob/submission-v2/Assignment_2/ass2_oces5303_21073359.ipynb)
 
 The submitted report is [ass2_oces5303_21073359.ipynb](ass2_oces5303_21073359.ipynb). It compares direct neural regression and learned environmental representations on 151 course observations. The scientific question is whether greater capacity or denoising improves estimation in later chronological blocks.
 
