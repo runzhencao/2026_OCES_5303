@@ -1,9 +1,9 @@
 {
   "verification_actor": "Codex",
-  "verified_at": "2026-11-02T18:31:00+08:00",
+  "verified_at": "2026-11-02T18:38:00+08:00",
   "verification_status": "passed_actual_colab_cpu_run_all",
   "repository": "https://github.com/runzhencao/2026_OCES_5303",
-  "release_ref": "submission-v1",
+  "release_ref": "submission-v2",
   "notebook": "Assignment_2/ass2_oces5303_21073359.ipynb",
   "runtime": "Google Colab Python 3 Google Compute Engine CPU",
   "versions": {

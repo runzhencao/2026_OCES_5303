@@ -15,4 +15,6 @@ The tagged release `submission-v2` fixes the reproduction source. Read each assi
 
 ## Verified execution
 
-On 2 November 2026, Assignment 2 completed all 13 code cells in a fresh Google Colab CPU runtime (Python 3.13.18, PyTorch 2.11.0+cpu). The remote course table matched the frozen data; metric assertions passed, five figures and the scale table were regenerated, and four CPU examples were fitted. See the [runtime record](validation/colab_hw2_2026-11-02.json). The optional full search and 189-fit scale retraining were disabled. Both notebooks also completed fresh local-kernel execution.
+On 2 November 2026, the final `submission-v2` Assignment 2 notebook completed all 13 code cells in a fresh Google Colab CPU runtime (Python 3.13.18, PyTorch 2.11.0+cpu). The remote course table matched the frozen data; metric assertions passed, five figures and the scale table were regenerated, and four CPU examples were fitted. See the [runtime record](validation/colab_hw2_2026-11-02.json). The optional full search and 189-fit scale retraining were disabled. Both notebooks also completed fresh local-kernel execution.
+
+Assignment 1 also completed all 17 code cells in Google Colab, including fresh model fitting and seven plots. Its notebook is identical in the two release tags; see the [Assignment 1 record](validation/colab_hw1_2026-11-02.json). Download the executed English notebooks from the [final release](https://github.com/runzhencao/2026_OCES_5303/releases/tag/submission-v2).
