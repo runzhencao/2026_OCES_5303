@@ -1,0 +1,8 @@
+{
+  "status": "complete",
+  "counts": {
+    "neural": 1888,
+    "random_forest": 472
+  },
+  "elapsed_seconds": 916.9853503704071
+}

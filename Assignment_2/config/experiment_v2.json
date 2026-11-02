@@ -1,0 +1,681 @@
+{
+  "protocol_version": "2",
+  "status": "planned_not_trained",
+  "generator_seed": 20260922,
+  "generation": "Balanced columns independently shuffled; reject duplicate configs; family seeds +0,+1,+2; DAE copies AE",
+  "development_rows": 120,
+  "historical_holdout_rows": 31,
+  "outer_cv": {
+    "n_splits": 3,
+    "test_size": 20,
+    "gap": 1
+  },
+  "inner_cv": {
+    "n_splits": 3,
+    "test_size": 10,
+    "gap": 1
+  },
+  "selection_seeds": [
+    5303,
+    5304,
+    5305
+  ],
+  "evaluation_seeds": [
+    5303,
+    5304,
+    5305,
+    5306,
+    5307,
+    5308,
+    5309,
+    5310,
+    5311,
+    5312
+  ],
+  "checkpoint_epochs": [
+    100,
+    300,
+    800
+  ],
+  "optimizer": "AdamW",
+  "activation": "Tanh",
+  "batch_mode": "full_batch",
+  "dtype": "float32",
+  "normalization_layers": null,
+  "ridge_alphas": [
+    0.01,
+    0.1,
+    1,
+    10,
+    100,
+    1000
+  ],
+  "pca_components": [
+    2,
+    4,
+    6
+  ],
+  "random_forest": {
+    "n_estimators": 400,
+    "max_depth": [
+      3,
+      null
+    ],
+    "min_samples_leaf": [
+      2,
+      5,
+      10
+    ],
+    "max_features": [
+      0.7,
+      1.0
+    ]
+  },
+  "ensemble": "All ten evaluation members, equal-weight mean of predictions; evaluated separately",
+  "neural_fit_budget": {
+    "nested_selection": 1296,
+    "outer_refits": 120,
+    "final_selection": 432,
+    "final_refits": 40,
+    "total": 1888
+  },
+  "random_forest_fit_budget": 472,
+  "planned_execution": {
+    "host": "CALMIDE_GPU",
+    "device": "cuda",
+    "workers_per_gpu_initial": 1,
+    "gpu_count_if_available": 2,
+    "amp": false,
+    "tf32": false
+  },
+  "candidates": [
+    {
+      "id": "shallow_mlp_00",
+      "family": "shallow_mlp",
+      "width": 8,
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "dropout": 0.1,
+      "neural_parameter_count": 97
+    },
+    {
+      "id": "shallow_mlp_01",
+      "family": "shallow_mlp",
+      "width": 16,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.001,
+      "dropout": 0.2,
+      "neural_parameter_count": 193
+    },
+    {
+      "id": "shallow_mlp_02",
+      "family": "shallow_mlp",
+      "width": 32,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "neural_parameter_count": 385
+    },
+    {
+      "id": "shallow_mlp_03",
+      "family": "shallow_mlp",
+      "width": 8,
+      "learning_rate": 0.003,
+      "weight_decay": 0.01,
+      "dropout": 0.2,
+      "neural_parameter_count": 97
+    },
+    {
+      "id": "shallow_mlp_04",
+      "family": "shallow_mlp",
+      "width": 16,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "dropout": 0.2,
+      "neural_parameter_count": 193
+    },
+    {
+      "id": "shallow_mlp_05",
+      "family": "shallow_mlp",
+      "width": 32,
+      "learning_rate": 0.003,
+      "weight_decay": 0.1,
+      "dropout": 0.0,
+      "neural_parameter_count": 385
+    },
+    {
+      "id": "shallow_mlp_06",
+      "family": "shallow_mlp",
+      "width": 8,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.01,
+      "dropout": 0.1,
+      "neural_parameter_count": 97
+    },
+    {
+      "id": "shallow_mlp_07",
+      "family": "shallow_mlp",
+      "width": 16,
+      "learning_rate": 0.001,
+      "weight_decay": 0.001,
+      "dropout": 0.1,
+      "neural_parameter_count": 193
+    },
+    {
+      "id": "shallow_mlp_08",
+      "family": "shallow_mlp",
+      "width": 32,
+      "learning_rate": 0.001,
+      "weight_decay": 0.1,
+      "dropout": 0.2,
+      "neural_parameter_count": 385
+    },
+    {
+      "id": "shallow_mlp_09",
+      "family": "shallow_mlp",
+      "width": 8,
+      "learning_rate": 0.003,
+      "weight_decay": 0.1,
+      "dropout": 0.1,
+      "neural_parameter_count": 97
+    },
+    {
+      "id": "shallow_mlp_10",
+      "family": "shallow_mlp",
+      "width": 16,
+      "learning_rate": 0.003,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "neural_parameter_count": 193
+    },
+    {
+      "id": "shallow_mlp_11",
+      "family": "shallow_mlp",
+      "width": 32,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.001,
+      "dropout": 0.0,
+      "neural_parameter_count": 385
+    },
+    {
+      "id": "residual_mlp_00",
+      "family": "residual_mlp",
+      "width": 16,
+      "blocks": 1,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.01,
+      "dropout": 0.1,
+      "residual_scale": 0.5,
+      "neural_parameter_count": 737
+    },
+    {
+      "id": "residual_mlp_01",
+      "family": "residual_mlp",
+      "width": 16,
+      "blocks": 2,
+      "learning_rate": 0.003,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "residual_scale": 0.5,
+      "neural_parameter_count": 1281
+    },
+    {
+      "id": "residual_mlp_02",
+      "family": "residual_mlp",
+      "width": 32,
+      "blocks": 1,
+      "learning_rate": 0.003,
+      "weight_decay": 0.001,
+      "dropout": 0.2,
+      "residual_scale": 0.5,
+      "neural_parameter_count": 2497
+    },
+    {
+      "id": "residual_mlp_03",
+      "family": "residual_mlp",
+      "width": 32,
+      "blocks": 2,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "residual_scale": 0.5,
+      "neural_parameter_count": 4609
+    },
+    {
+      "id": "residual_mlp_04",
+      "family": "residual_mlp",
+      "width": 64,
+      "blocks": 1,
+      "learning_rate": 0.001,
+      "weight_decay": 0.001,
+      "dropout": 0.1,
+      "residual_scale": 0.5,
+      "neural_parameter_count": 9089
+    },
+    {
+      "id": "residual_mlp_05",
+      "family": "residual_mlp",
+      "width": 64,
+      "blocks": 2,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.01,
+      "dropout": 0.1,
+      "residual_scale": 0.5,
+      "neural_parameter_count": 17409
+    },
+    {
+      "id": "residual_mlp_06",
+      "family": "residual_mlp",
+      "width": 16,
+      "blocks": 1,
+      "learning_rate": 0.001,
+      "weight_decay": 0.001,
+      "dropout": 0.1,
+      "residual_scale": 0.5,
+      "neural_parameter_count": 737
+    },
+    {
+      "id": "residual_mlp_07",
+      "family": "residual_mlp",
+      "width": 16,
+      "blocks": 2,
+      "learning_rate": 0.001,
+      "weight_decay": 0.1,
+      "dropout": 0.2,
+      "residual_scale": 0.5,
+      "neural_parameter_count": 1281
+    },
+    {
+      "id": "residual_mlp_08",
+      "family": "residual_mlp",
+      "width": 32,
+      "blocks": 1,
+      "learning_rate": 0.003,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "residual_scale": 0.5,
+      "neural_parameter_count": 2497
+    },
+    {
+      "id": "residual_mlp_09",
+      "family": "residual_mlp",
+      "width": 32,
+      "blocks": 2,
+      "learning_rate": 0.001,
+      "weight_decay": 0.1,
+      "dropout": 0.2,
+      "residual_scale": 0.5,
+      "neural_parameter_count": 4609
+    },
+    {
+      "id": "residual_mlp_10",
+      "family": "residual_mlp",
+      "width": 64,
+      "blocks": 1,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.1,
+      "dropout": 0.2,
+      "residual_scale": 0.5,
+      "neural_parameter_count": 9089
+    },
+    {
+      "id": "residual_mlp_11",
+      "family": "residual_mlp",
+      "width": 64,
+      "blocks": 2,
+      "learning_rate": 0.003,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "residual_scale": 0.5,
+      "neural_parameter_count": 17409
+    },
+    {
+      "id": "ae_ridge_00",
+      "family": "ae_ridge",
+      "encoder_hidden": [
+        16
+      ],
+      "latent_dimension": 2,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.1,
+      "dropout": 0.0,
+      "neural_parameter_count": 428,
+      "noise_std_standardized": 0.0,
+      "paired_representation_id": "representation_00"
+    },
+    {
+      "id": "ae_ridge_01",
+      "family": "ae_ridge",
+      "encoder_hidden": [
+        16
+      ],
+      "latent_dimension": 4,
+      "learning_rate": 0.003,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "neural_parameter_count": 494,
+      "noise_std_standardized": 0.0,
+      "paired_representation_id": "representation_01"
+    },
+    {
+      "id": "ae_ridge_02",
+      "family": "ae_ridge",
+      "encoder_hidden": [
+        16
+      ],
+      "latent_dimension": 6,
+      "learning_rate": 0.003,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "neural_parameter_count": 560,
+      "noise_std_standardized": 0.0,
+      "paired_representation_id": "representation_02"
+    },
+    {
+      "id": "ae_ridge_03",
+      "family": "ae_ridge",
+      "encoder_hidden": [
+        32,
+        16
+      ],
+      "latent_dimension": 2,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.1,
+      "dropout": 0.0,
+      "neural_parameter_count": 1836,
+      "noise_std_standardized": 0.0,
+      "paired_representation_id": "representation_03"
+    },
+    {
+      "id": "ae_ridge_04",
+      "family": "ae_ridge",
+      "encoder_hidden": [
+        32,
+        16
+      ],
+      "latent_dimension": 4,
+      "learning_rate": 0.001,
+      "weight_decay": 0.001,
+      "dropout": 0.0,
+      "neural_parameter_count": 1902,
+      "noise_std_standardized": 0.0,
+      "paired_representation_id": "representation_04"
+    },
+    {
+      "id": "ae_ridge_05",
+      "family": "ae_ridge",
+      "encoder_hidden": [
+        32,
+        16
+      ],
+      "latent_dimension": 6,
+      "learning_rate": 0.003,
+      "weight_decay": 0.001,
+      "dropout": 0.0,
+      "neural_parameter_count": 1968,
+      "noise_std_standardized": 0.0,
+      "paired_representation_id": "representation_05"
+    },
+    {
+      "id": "ae_ridge_06",
+      "family": "ae_ridge",
+      "encoder_hidden": [
+        16
+      ],
+      "latent_dimension": 2,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "neural_parameter_count": 428,
+      "noise_std_standardized": 0.0,
+      "paired_representation_id": "representation_06"
+    },
+    {
+      "id": "ae_ridge_07",
+      "family": "ae_ridge",
+      "encoder_hidden": [
+        16
+      ],
+      "latent_dimension": 4,
+      "learning_rate": 0.001,
+      "weight_decay": 0.1,
+      "dropout": 0.0,
+      "neural_parameter_count": 494,
+      "noise_std_standardized": 0.0,
+      "paired_representation_id": "representation_07"
+    },
+    {
+      "id": "ae_ridge_08",
+      "family": "ae_ridge",
+      "encoder_hidden": [
+        16
+      ],
+      "latent_dimension": 6,
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "neural_parameter_count": 560,
+      "noise_std_standardized": 0.0,
+      "paired_representation_id": "representation_08"
+    },
+    {
+      "id": "ae_ridge_09",
+      "family": "ae_ridge",
+      "encoder_hidden": [
+        32,
+        16
+      ],
+      "latent_dimension": 2,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "neural_parameter_count": 1836,
+      "noise_std_standardized": 0.0,
+      "paired_representation_id": "representation_09"
+    },
+    {
+      "id": "ae_ridge_10",
+      "family": "ae_ridge",
+      "encoder_hidden": [
+        32,
+        16
+      ],
+      "latent_dimension": 4,
+      "learning_rate": 0.003,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "neural_parameter_count": 1902,
+      "noise_std_standardized": 0.0,
+      "paired_representation_id": "representation_10"
+    },
+    {
+      "id": "ae_ridge_11",
+      "family": "ae_ridge",
+      "encoder_hidden": [
+        32,
+        16
+      ],
+      "latent_dimension": 6,
+      "learning_rate": 0.001,
+      "weight_decay": 0.001,
+      "dropout": 0.0,
+      "neural_parameter_count": 1968,
+      "noise_std_standardized": 0.0,
+      "paired_representation_id": "representation_11"
+    },
+    {
+      "id": "dae_ridge_00",
+      "family": "dae_ridge",
+      "encoder_hidden": [
+        16
+      ],
+      "latent_dimension": 2,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.1,
+      "dropout": 0.0,
+      "neural_parameter_count": 428,
+      "noise_std_standardized": 0.1,
+      "paired_representation_id": "representation_00"
+    },
+    {
+      "id": "dae_ridge_01",
+      "family": "dae_ridge",
+      "encoder_hidden": [
+        16
+      ],
+      "latent_dimension": 4,
+      "learning_rate": 0.003,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "neural_parameter_count": 494,
+      "noise_std_standardized": 0.1,
+      "paired_representation_id": "representation_01"
+    },
+    {
+      "id": "dae_ridge_02",
+      "family": "dae_ridge",
+      "encoder_hidden": [
+        16
+      ],
+      "latent_dimension": 6,
+      "learning_rate": 0.003,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "neural_parameter_count": 560,
+      "noise_std_standardized": 0.1,
+      "paired_representation_id": "representation_02"
+    },
+    {
+      "id": "dae_ridge_03",
+      "family": "dae_ridge",
+      "encoder_hidden": [
+        32,
+        16
+      ],
+      "latent_dimension": 2,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.1,
+      "dropout": 0.0,
+      "neural_parameter_count": 1836,
+      "noise_std_standardized": 0.1,
+      "paired_representation_id": "representation_03"
+    },
+    {
+      "id": "dae_ridge_04",
+      "family": "dae_ridge",
+      "encoder_hidden": [
+        32,
+        16
+      ],
+      "latent_dimension": 4,
+      "learning_rate": 0.001,
+      "weight_decay": 0.001,
+      "dropout": 0.0,
+      "neural_parameter_count": 1902,
+      "noise_std_standardized": 0.1,
+      "paired_representation_id": "representation_04"
+    },
+    {
+      "id": "dae_ridge_05",
+      "family": "dae_ridge",
+      "encoder_hidden": [
+        32,
+        16
+      ],
+      "latent_dimension": 6,
+      "learning_rate": 0.003,
+      "weight_decay": 0.001,
+      "dropout": 0.0,
+      "neural_parameter_count": 1968,
+      "noise_std_standardized": 0.1,
+      "paired_representation_id": "representation_05"
+    },
+    {
+      "id": "dae_ridge_06",
+      "family": "dae_ridge",
+      "encoder_hidden": [
+        16
+      ],
+      "latent_dimension": 2,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "neural_parameter_count": 428,
+      "noise_std_standardized": 0.1,
+      "paired_representation_id": "representation_06"
+    },
+    {
+      "id": "dae_ridge_07",
+      "family": "dae_ridge",
+      "encoder_hidden": [
+        16
+      ],
+      "latent_dimension": 4,
+      "learning_rate": 0.001,
+      "weight_decay": 0.1,
+      "dropout": 0.0,
+      "neural_parameter_count": 494,
+      "noise_std_standardized": 0.1,
+      "paired_representation_id": "representation_07"
+    },
+    {
+      "id": "dae_ridge_08",
+      "family": "dae_ridge",
+      "encoder_hidden": [
+        16
+      ],
+      "latent_dimension": 6,
+      "learning_rate": 0.001,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "neural_parameter_count": 560,
+      "noise_std_standardized": 0.1,
+      "paired_representation_id": "representation_08"
+    },
+    {
+      "id": "dae_ridge_09",
+      "family": "dae_ridge",
+      "encoder_hidden": [
+        32,
+        16
+      ],
+      "latent_dimension": 2,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "neural_parameter_count": 1836,
+      "noise_std_standardized": 0.1,
+      "paired_representation_id": "representation_09"
+    },
+    {
+      "id": "dae_ridge_10",
+      "family": "dae_ridge",
+      "encoder_hidden": [
+        32,
+        16
+      ],
+      "latent_dimension": 4,
+      "learning_rate": 0.003,
+      "weight_decay": 0.0001,
+      "dropout": 0.0,
+      "neural_parameter_count": 1902,
+      "noise_std_standardized": 0.1,
+      "paired_representation_id": "representation_10"
+    },
+    {
+      "id": "dae_ridge_11",
+      "family": "dae_ridge",
+      "encoder_hidden": [
+        32,
+        16
+      ],
+      "latent_dimension": 6,
+      "learning_rate": 0.001,
+      "weight_decay": 0.001,
+      "dropout": 0.0,
+      "neural_parameter_count": 1968,
+      "noise_std_standardized": 0.1,
+      "paired_representation_id": "representation_11"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "fixed_at_utc": "2026-09-22T03:17:50Z",
+  "configurations": {
+    "ae_ridge": {
+      "id": "ae_ridge_02",
+      "family": "ae_ridge",
+      "encoder_hidden": [
+        16
+      ],
+      "latent_dimension": 6,
+      "learning_rate": 0.003,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "neural_parameter_count": 560,
+      "noise_std_standardized": 0.0,
+      "paired_representation_id": "representation_02",
+      "epoch": 300,
+      "alpha": 10.0,
+      "selection_rmse": 0.8537219164701119
+    },
+    "dae_ridge": {
+      "id": "dae_ridge_02",
+      "family": "dae_ridge",
+      "encoder_hidden": [
+        16
+      ],
+      "latent_dimension": 6,
+      "learning_rate": 0.003,
+      "weight_decay": 0.01,
+      "dropout": 0.0,
+      "neural_parameter_count": 560,
+      "noise_std_standardized": 0.1,
+      "paired_representation_id": "representation_02",
+      "epoch": 300,
+      "alpha": 1.0,
+      "selection_rmse": 0.8456807054783221
+    },
+    "mean": {
+      "id": "mean",
+      "family": "mean",
+      "epoch": 0,
+      "alpha": null,
+      "selection_rmse": 1.013898138252099
+    },
+    "pca_ridge": {
+      "id": "pca_6_100",
+      "family": "pca_ridge",
+      "components": 6,
+      "alpha": 100.0,
+      "epoch": 0,
+      "selection_rmse": 0.908616599555519
+    },
+    "random_forest": {
+      "id": "random_forest_01",
+      "family": "random_forest",
+      "n_estimators": 400,
+      "max_depth": 3,
+      "min_samples_leaf": 2,
+      "max_features": 1.0,
+      "epoch": 0,
+      "alpha": null,
+      "selection_rmse": 0.8266697613558883
+    },
+    "residual_mlp": {
+      "id": "residual_mlp_10",
+      "family": "residual_mlp",
+      "width": 64,
+      "blocks": 1,
+      "learning_rate": 0.0003,
+      "weight_decay": 0.1,
+      "dropout": 0.2,
+      "residual_scale": 0.5,
+      "neural_parameter_count": 9089,
+      "epoch": 300,
+      "alpha": null,
+      "selection_rmse": 0.7450119578033926
+    },
+    "ridge": {
+      "id": "ridge_1",
+      "family": "ridge",
+      "alpha": 1.0,
+      "epoch": 0,
+      "selection_rmse": 0.7137897124520602
+    },
+    "shallow_mlp": {
+      "id": "shallow_mlp_04",
+      "family": "shallow_mlp",
+      "width": 16,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "dropout": 0.2,
+      "neural_parameter_count": 193,
+      "epoch": 800,
+      "alpha": null,
+      "selection_rmse": 0.7312061107592293
+    },
+    "temperature_ols": {
+      "id": "temperature_ols",
+      "family": "temperature_ols",
+      "epoch": 0,
+      "alpha": null,
+      "selection_rmse": 0.9017987690379381
+    }
+  },
+  "historical_evaluated": false
+}
